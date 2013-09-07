@@ -6,7 +6,7 @@ require 'json'
 require 'pony'
 require 'highline/import'
 
-Mongoid.load!("mongoid.yml", :development)
+Mongoid.load!("mongoid.yml")
 
 
 class Visitor
@@ -171,16 +171,16 @@ post '/email' do
 end
 
 #for email
- Pony.options = { 
+Pony.options = { 
   :via => 'smtp',
   :via_options => {
-      :address              => 'smtp.gmail.com',
+      :address              => 'smtp.sendgrid.net',
       :port                 => '587',
       :enable_starttls_auto => true,
-      :user_name            => ENV['USER_NAME'],
-      :password             => ENV['PASSWORD'],
+      :user_name            => ENV['SENDGRID_USERNAME'],
+      :password             => ENV['SENDGRID_PASSWORD'],
       :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-      :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
+      :domain               => "heroku.com" # the HELO domain provided by the client to the server
     }
   }
   
