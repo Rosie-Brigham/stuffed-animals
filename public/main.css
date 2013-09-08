@@ -1,26 +1,27 @@
 h1
-    {font-family: verdana; color:darkgrey; background: beige;
-    font-size: 55px; text-align: center;}
+    {font-family: verdana; color:black; font-size: 55px; text-align: center;opacity:1;}
 
-body 
-    {background-color: AliceBlue;
-    /*background-image:url('/images/portico.jpg'); */
-    /*background-repeat:no-repeat; */
-    /*background-size: 100% auto; */
-    ;}
+body
+    {background-image:url('/images/background_2.jpg');opacity:0.8; background-repeat:no-repeat;
+    background-size: 100% auto; color:black;
+    }
+
+div.container
+    {background-color: AliceBlue;font-size: 20px;}
+
+* {text-align: center}
 
 div.transbox    
     { width: 1000px;
     height:800px;
     margin:30px 50px;
-    background-color:AliceBlue;
     border:1.5px solid black;
-    opacity:0.8;}
+    opacity:0.8;text-align: left}
 
 div.transbox form
     {margin:30px 50px;
     font-weight: bold;
-    color: black, }
+    color: black; }
 
 .btn-success:hover
     {background-color: #660099;

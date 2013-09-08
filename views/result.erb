@@ -1,32 +1,61 @@
-<h2>Thank you <%= @name %>! 
-    <br>
-    After much tantalising tinkering, the machine has triggered a most tempting result
-
-</h2>
 <body>
+<div class='container'>
+    <h2>Thank you <%= @name %> 
+        <br>
+        After much tantalising tinkering, the machine has triggered a most tempting result
+    </h2>
+
     <div class='transbox'>
-<h2>Your Suggestion:</h2>
-    <br>
+    <h3>Your Suggestion:</h3>
+        <span class='museum'><h2> <%= museum %> </h2></span>
+        Here are a couple of things to look out for.... 
+<!-- right, this is gunna be a long slog, but I can't quite work out how to do it on the app thing. so here goes...... -->
+            <br>
+            <br>
+            <span class='rec'> 
+                <% if museum == "The National Gallery" %>
+            <table> 
+                <tbody>
+                    <tr>
+                        <th><img class="round" src="images/national_gallery_2" /></th>
+                        <th>A wonder around the National Gallery is always rewarding. As National Art collections go this one is not too big, and so it     is  easy to walk around the majority of it without getting 'art sick'.
+                             However, may be small compared to places like the met but it sure is packed with mazing masterpeices.
+                             <br>
+                             <br>
+                            Study the pre-renaissance style of painting in the Sainsbury wing, 
+                            ask the attendents about the visual consequences of the workshop practice. 
+                            In particular look at the Wilton Dyptych (shown right)
+                            <br>
+                            <br>
+                            For those interested in the traditional greats the gallery has a fabulous collection of impressionist works on the first floor 
+                            to the right as you walk in the main entrance. Also make sure you check out the English Landscape artists, particularly Turner's 'Rain, Steam and Speed' in room 39
+                            <br>
+                            <br>
+                            Finally, with out a doubt pay a visit to Leonardo da Vinci's 
+                            'Madonna on the Rocks', arguably on of the finest works in the collection (shown left)
+                         </th>
+                        <th><img src="images/national_gallery_1"/></th>
+                    </tr>
+                </tbody>
+            </table>
+            <% end %>
 
-<span class='museum'> <%= museum %> </span>
-<br>
-<br>
-Here are a couple of things to look out for.... 
 
-<!-- thanks go here -->
-<br>
-<br>
 
-Would you like your reccomendation emailed to you?
-<br> 
-If so, please enter your email into the box
 
-<label> <strong>here </strong></label>
-            <form method='post' action='/email'>
-            <input type='text' name='email'>
-<span>
-    <br>
-    <br>
-The Mini-meandering-maching hopes to have helped you on your day, and that you enjoy your visit to London, so very different from <%= @place %>
+            <br>
+            <br>
+
+            Would you like your reccomendation emailed to you?
+            <br> 
+            If so, please enter your email into the box
+
+            <label> <strong>here </strong></label>
+                        <form method='post' action='/email'>
+                        <input type='text' name='email'>
+            <span>
+                <br>
+                <br>
+            The Mini-meandering-maching hopes to have helped you on your day, and that you enjoy your visit to London, so very different from <%= @place %>
 </span>
-</dv>
+</div>

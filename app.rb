@@ -31,7 +31,6 @@ post '/' do
     erb :form
 end
 
-
 post '/form' do
    
     @first = params[:first]
@@ -41,8 +40,6 @@ post '/form' do
     #@finalText = finalText
     
 # slider (hopefully)
-
-
 
 # musum advice
 def museum
@@ -107,7 +104,7 @@ def museum
   elsif @first =='B' && @second == 'ii' && @third == '3'
     return "Natural History Museum (Tring?)"
   elsif @first =='B' && @second == 'ii' && @third == '4'
-    return "Welcom Collection"
+    return "Welcome Collection"
 
   elsif @first =='B' && @second == 'iii' && @third == '1'
     return "Royal Institution"
@@ -138,6 +135,13 @@ def museum
       
 end
 end
+
+# recomendation!
+
+
+
+
+
 
     n = Visitor.new(:name => @name, :place => @place)
     n.save
@@ -184,3 +188,4 @@ Pony.options = {
     }
   }
   
+
