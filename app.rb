@@ -44,7 +44,7 @@ post '/form' do
 # musum advice
 def museum
   if @first == 'A' && @second == 'i' && @third == '1'
-    return "The Vault"
+    return "Tate Modern"
   elsif @first =='A' && @second == 'i' && @third == '2'
     return "Tate Modern"
   elsif @first =='A' && @second == 'i' && @third == '3'
@@ -64,7 +64,7 @@ def museum
   elsif @first =='A' && @second == 'iii' && @third == '1'
     return "The Natural History Museum"
   elsif @first =='A' && @second == 'iii' && @third == '2'
-    return "The Cigar Museum"
+    return "Sir John Soane Museum"
   elsif @first =='A' && @second == 'iii' && @third == '3'
     return "The British Museum"
   elsif @first =='A' && @second == 'iii' && @third == '4'
@@ -73,41 +73,41 @@ def museum
   elsif @first =='A' && @second == 'iv' && @third == '1'
     return "The Wallace Collection"
   elsif @first =='A' && @second == 'iv' && @third == '2'
-    return "Sir John Soane Museum"
+    return "Twinnings Tea Shop and Museum"
   elsif @first =='A' && @second == 'iv' && @third == '3'
     return "Southwark"
   elsif @first =='A' && @second == 'iv' && @third == '4'
     return "The Cartoon Museum"
 
   elsif @first =='A' && @second == 'v' && @third == '1'
-    return "Trafalga Square"
+    return "Trafalgar Square"
   elsif @first =='A' && @second == 'v' && @third == '2'
     return "Hyde Park"
   elsif @first =='A' && @second == 'v' && @third == '3'
-    return "Strand/Mall/Houses of Parliament"
+    return "Sir John Soane Museum"
   elsif @first =='A' && @second == 'v' && @third == '4'
     return "Brick Lane/East end"
 
   elsif @first =='B' && @second == 'i' && @third == '1'
     return "Greenwich"
   elsif @first =='B' && @second == 'i' && @third == '2'
-    return "Barthes Pathology Museum"
+    return "Highgate Cemetary"
   elsif @first =='B' && @second == 'i' && @third == '3'
-    return "Natural History Museum"
+    return "The Natural History Museum"
   elsif @first =='B' && @second == 'i' && @third == '4'
     return "Welcome Collection"
 
   elsif @first =='B' && @second == 'ii' && @third == '1'
     return "Twinnings Tea Shop and Museum"
   elsif @first =='B' && @second == 'ii' && @third == '2'
-    return "Barthes Pathology Museum"
+    return "Welcome Collection"
   elsif @first =='B' && @second == 'ii' && @third == '3'
-    return "Natural History Museum (Tring?)"
+    return "The National Gallery"
   elsif @first =='B' && @second == 'ii' && @third == '4'
     return "Welcome Collection"
 
   elsif @first =='B' && @second == 'iii' && @third == '1'
-    return "Royal Institution"
+    return "Science Museum"
   elsif @first =='B' && @second == 'iii' && @third == '2'
     return "Science Museum"
   elsif @first =='B' && @second == 'iii' && @third == '3'
@@ -118,20 +118,20 @@ def museum
   elsif @first =='B' && @second == 'iv' && @third == '1'
     return "UCL Museums"
   elsif @first =='B' && @second == 'iv' && @third == '2'
-    return "Gordon Museum"
+    return "Welcome Collection"
   elsif @first =='B' && @second == 'iv' && @third == '3'
     return "Old Operating Theater"
   elsif @first =='B' && @second == 'iv' && @third == '4'
     return "Horniman"
 
   elsif @first =='B' && @second == 'v' && @third == '1'
-    return "Gas lamps"
+    return "Hyde Park"
   elsif @first =='B' && @second == 'v' && @third == '2'
-    return "Highgate"
+    return "Highgate Cemetary"
   elsif @first =='B' && @second == 'v' && @third == '3'
-    "Primrose Hill"
+    return "Hyde Park"
   else @first =='B' && @second == 'v' && @third == '4'
-    return "Garden Museum"
+    return "Southwark"
       
 end
 end
