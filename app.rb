@@ -55,7 +55,7 @@ def museum
   elsif @first =='A' && @second == 'ii' && @third == '1'
     return "The Wallace Collection"
   elsif @first =='A' && @second == 'ii' && @third == '2'
-    return "The V+A"
+    return "The V&A"
   elsif @first =='A' && @second == 'ii' && @third == '3'
     return "The National Gallery"
   elsif @first =='A' && @second == 'ii' && @third == '4'
@@ -141,8 +141,6 @@ end
 
 
 
-
-
     n = Visitor.new(:name => @name, :place => @place)
     n.save
 
@@ -169,7 +167,7 @@ post '/email' do
     d = Visitor.new(:email => vemail)
 
      Pony.mail(:to => vemail, 
-        :subject => "The amazing mini-meandering machine", :body => erb(:email, :layout => false))
+        :subject => "The amazing museum-meandering machine", :body => erb(:email, :layout => false))
     
     erb:thanks
 end
