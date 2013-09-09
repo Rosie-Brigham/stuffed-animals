@@ -41,8 +41,53 @@ post '/form' do
     
 # name-carried on ?!?!?!
     @name = params[:visitor_name2]
-# musum advice
-def museum
+
+    n = Visitor.new(:name => @name, :place => @place)
+    n.save
+
+    #this took the users input and saved it to the database
+    #pony
+
+    erb :result
+    #getting up the thanks page
+
+end
+#to keep a record of everyone who has visited
+get '/list' do
+    puts 'hello-world'
+    @visitor = Visitor.all
+    erb :records
+end
+
+post '/email' do 
+"hello-world"
+  @museum = params[:vmuseum]
+    vemail = params[:email]
+    d = Visitor.new(:email => vemail)
+
+     Pony.mail(:to => vemail, 
+        :subject => "The amazing museum-meandering machine", :body => erb(:email, :layout => false))
+    
+    erb:thanks
+end
+
+#for email
+Pony.options = { 
+  :via => 'smtp',
+  :via_options => {
+      :address              => 'smtp.sendgrid.net',
+      :port                 => '587',
+      :enable_starttls_auto => true,
+      :user_name            => ENV['SENDGRID_USERNAME'],
+      :password             => ENV['SENDGRID_PASSWORD'],
+      :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+      :domain               => "heroku.com" # the HELO domain provided by the client to the server
+    }
+  }
+  
+#museum advice
+
+def museum 
   if @first == 'A' && @second == 'i' && @third == '1'
     return "Tate Modern"
   elsif @first =='A' && @second == 'i' && @third == '2'
@@ -135,55 +180,3 @@ def museum
       
 end
 end
-
-# recomendation!
-
-
-
-
-    n = Visitor.new(:name => @name, :place => @place)
-    n.save
-
-    #this took the users input and saved it to the database
-    #pony
-
-    erb :result
-    #getting up the thanks page
-
-end
-#to keep a record of everyone who has visited
-
-
-
-get '/list' do
-    puts 'hello-world'
-    @visitor = Visitor.all
-    erb :records
-end
-
-post '/email' do 
-"hello-world"
-    vemail = params[:email]
-    d = Visitor.new(:email => vemail)
-
-     Pony.mail(:to => vemail, 
-        :subject => "The amazing museum-meandering machine", :body => erb(:email, :layout => false))
-    
-    erb:thanks
-end
-
-#for email
-Pony.options = { 
-  :via => 'smtp',
-  :via_options => {
-      :address              => 'smtp.sendgrid.net',
-      :port                 => '587',
-      :enable_starttls_auto => true,
-      :user_name            => ENV['SENDGRID_USERNAME'],
-      :password             => ENV['SENDGRID_PASSWORD'],
-      :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-      :domain               => "heroku.com" # the HELO domain provided by the client to the server
-    }
-  }
-  
-
