@@ -39,8 +39,8 @@ post '/form' do
     #@museum = museum
     #@finalText = finalText
     
-# slider (hopefully)
-
+# name-carried on ?!?!?!
+    @name = params[:visitor_name2]
 # musum advice
 def museum
   if @first == 'A' && @second == 'i' && @third == '1'
